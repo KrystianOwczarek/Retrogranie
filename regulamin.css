@@ -43,7 +43,7 @@ a
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: 1.4em;	
+	top: 1.4em;
 	left: 39.5%;
 }
 
@@ -61,7 +61,7 @@ a
 
 
 /*przycisk zaloguj*/
-input[type=button].log
+input[type=button]
 {
 	position: absolute;
 	top: 0.89em;
@@ -78,7 +78,7 @@ input[type=button].log
 	transition: all .2s ease-in-out;
 }
 
-input[type=button].log:hover
+input[type=button]:hover
 {
 	background-color: #00c800;
 	border: 1px solid #00c800;
@@ -115,7 +115,6 @@ input[type=submit]:hover
 /*menu nawigacyjne strony*/
 .nav
 {
-	width: 100%;
 	clear: both;
 	text-align:center;
 	border-top: 1px solid #292929;
@@ -156,7 +155,7 @@ ol > li
 	width: 160px;
 	height: 40px;
 	transition: all .2s ease-in-out;
-	z-index: 1;
+    z-index: 1;
 }
 
 ol > li:hover
@@ -214,7 +213,7 @@ ol > li > ul > li:hover
 {
 	display: none;
 	position: absolute;
-	top: 6.85em;
+	top: 6.8em;
 	right: 2%;
 	transition: all .2s ease-in-out;
 }
@@ -228,6 +227,7 @@ ol > li > ul > li:hover
 .hamburger
 {
 	display: none;
+
 }
 
 .hamburger.active
@@ -274,145 +274,40 @@ ol > li > ul > li:hover
 	top: 18em;
 }
 
-/*przestrzeń w której umieszczone jest okienko logowania*/
-.boxContainer
-{
-	width: 100%;
-	height: 25em;
-}
-
-/*okno logowania*/
-.box
+/*pojemnik na elementy ze środka strony*/
+.contentContainer
 {
 	display: flex;
-	flex-flow: column nowrap;
-	text-align: center;
-	position: relative;
-	top: 3.4em;
-	width: 400px;
-	margin-right: auto;
-	margin-left: auto;
-	padding: 40px;
-	background-color: #c1c1c1;
-	-webkit-box-shadow: 0px 0px 9px 4px rgba(193,193,193,0.59); 
-	box-shadow: 0px 0px 9px 4px rgba(193,193,193,0.59);
-}
-
-/*napis Logowanie w boxie*/
-h1
-{
-	display: flex;
+	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	position: relative;
-	top: -0.8em;
-	font-size: 45px;
-	letter-spacing: 4px;
+	z-index: -1;
 }
 
-/*pozycjonowanie elementów znajdujących się pod napisem Logowanie*/
-form
+/*informacje zawarte na środku strony*/
+h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*informacje zawarte na środku strony*/
+.content
 {
 	position: relative;
-	top: -0.8em
-}
-
-/*miejsca na wpisanie loginu i hasła*/
-input[type=login],
-input[type=password]
-{
-	width: 230px;
-	height: 40px;
-	margin-top: 15px;
-	outline: none;
-	padding: 5px;
-	border-radius: 3px;
-	border: 2px solid white;
-	font-size: 20px;
-	transition: all .2s ease-in-out;
-}
-
-input[type=login]:focus,
-input[type=password]:focus
-{
-	-webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.87); 
-	box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.87);
-	border: 2px solid #a5cda5;
-	background-color: #e9f3e9;
-	color: #428c42;
-}
-
-input::-webkit-input-placeholder
-{
-	color: #2a2a2a;
-}
-
-input:focus::-webkit-input-placeholder
-{
-	color: #428c42;
-}
-
-/*przycisk odpowiadający za logowanie*/
-.zal2
-{
-	position: relative;
-	top: -0.4em;
-	left: 0;
-	width: 262px;
-	font-size: 20px;
-	border-radius: 5px;
-	border: 1px solid #00b300;
-	padding: 10px;
-	color: white;
-	margin-top: 40px;
-	background-color: #00b300;
-	letter-spacing: 4px;
-	transition: all .2s ease-in-out;
-	
-}
-
-.zal2:hover
-{
-	background-color: #00c800;	
-	color: #292929;
-	border: 1px solid #00c800;
-	cursor: pointer;
+	left: -1.8%;
+	width: 40em;
+	margin: 20px 0px 0px 65px;
+	line-height: 150%;
+	text-align: justify;
 }
 
 
-/*napis "Nie pamietasz hasła?"*/
-h2
+/*pozycjowoawnie footera*/
+footer
 {
-	font-size: 16px;
-	letter-spacing: 3px;
-}
-
-h2 > a
-{
-	color: #00b300;
-	text-decoration: none;
-	line-height: 4px;
-}
-
-h2 > a:hover
-{
-	text-decoration: underline;
-}
-
-/*napis "Zarejestruj się" pod boxem*/
-h3
-{
-	position: relative;
-	top: -4em;
-	text-align: center;
-	letter-spacing: 3px;
-	font-size: 18px;
-	color: white !important;
-}
-
-h3:hover
-{
-	text-decoration: underline;
+	position: absolute;
 }
 
 /*odnośniki do social mediów*/
@@ -505,14 +400,14 @@ h3:hover
 
 @media screen and (max-width: 1700px)
 {
-	input[type=button].log { left: 78vw; }
+	input[type=button] { left: 78vw; }
 	.img { left: 38%; }
 	.content { left: -2%; }
 }
 
 @media screen and (max-width: 1540px)
 {
-	input[type=button].log { left: 75.5vw; }
+	input[type=button] { left: 75.5vw; }
 	input[type=submit] { left: 87vw; }
 	.img { left: 37%; }
 	.ad2 { left: 90%; }
@@ -521,7 +416,7 @@ h3:hover
 
 @media screen and (max-width: 1300px)
 {
-	input[type=button].log { left: 72vw; }
+	input[type=button] { left: 72vw; }
 	input[type=submit] { left: 85.5vw; }
 	.ad1 { display: none; }
 	.ad2 { display: none; }
@@ -531,7 +426,7 @@ h3:hover
 
 @media screen and (max-width: 1150px)
 {
-	input[type=button].log { left: 69vw; }
+	input[type=button] { left: 69vw; }
 	input[type=submit] { left: 84vw; }
 	.img { left: 32%; }
 	.text { left: 43%; }
@@ -539,7 +434,7 @@ h3:hover
 
 @media screen and (max-width: 1000px)
 {
-	input[type=button].log { left: 66vw; }
+	input[type=button] { left: 66vw; }
 	input[type=submit] { left: 82.5vw; }
 	.img { left: 28%; }
 	.text { left: 43%; }
@@ -552,11 +447,10 @@ h3:hover
 
 @media screen and (max-width: 900px)
 {
-	input[type=button].log { left: 60vw; }
+	input[type=button] { left: 60vw; }
 	input[type=submit] { left: 79vw; }
 	.img { left: 28%; }
 	.text { left: 43%; }
-
 }
 
 
@@ -564,8 +458,8 @@ h3:hover
 {
 	.img { left: 26%; }
 	.text { left: 44%; }
-	input[type=button].log { left: 2%; top: 3.65em;  }
-	input[type=submit] { left: 25%; top: 3.65em;  }
+	input[type=button] { left: 2%; top: 3.65em }
+	input[type=submit] { left: 25%; top: 3.65em; }
 	.content { left: -5.5%; }
 	.yt { width: 25vw; }
 	.fb { width: 25vw; }
@@ -583,14 +477,15 @@ h3:hover
 		display: flex;
 		cursor: pointer;
 	}
+	footer{ position: absolute; bottom: 0; }
 }
 
 @media screen and (max-width: 600px)
 {
 	.img { left: 10%; }
 	.text { left: 35%; }
-	input[type=button].log { left: 2%; top: 3.65em;  }
-	input[type=submit] { left: 35%; top: 3.65em;  }
+	input[type=button] { left: 2%; top: 3.65em; }
+	input[type=submit] { left: 35%; top: 3.65em; }
 	.content { left: -6.5%; }
 	.yt { width: 25vw; }
 	.fb { width: 25vw; }

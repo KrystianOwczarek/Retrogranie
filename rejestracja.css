@@ -124,6 +124,7 @@ input[type=submit]:hover
 	padding: 5px;
 	border-radius: 5px;
 	background-color: #c1c1c1;
+	z-index: 1;
 }
 
 ol
@@ -274,19 +275,20 @@ ol > li > ul > li:hover
 	top: 18em;
 }
 
-/*przestrzeń w której umieszczone jest okienko logowania*/
+/*środek strony*/
 .boxContainer
 {
 	width: 100%;
-	height: 25em;
+	height: 34.8em;
 }
 
-/*okno logowania*/
+/*okno rejestracji*/
 .box
 {
 	display: flex;
 	flex-flow: column nowrap;
-	text-align: center;
+	justify-content: center;
+	align-items: center;
 	position: relative;
 	top: 3.4em;
 	width: 400px;
@@ -298,41 +300,41 @@ ol > li > ul > li:hover
 	box-shadow: 0px 0px 9px 4px rgba(193,193,193,0.59);
 }
 
-/*napis Logowanie w boxie*/
+/*napis "Załóż konto"*/
 h1
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	top: -0.8em;
 	font-size: 45px;
+	margin: 0;
 	letter-spacing: 4px;
+	margin-bottom: 20px;
 }
 
-/*pozycjonowanie elementów znajdujących się pod napisem Logowanie*/
-form
+/*napis "Uzupełnij poniższe pola, by utworzyć konto"*/
+h2
 {
-	position: relative;
-	top: -0.8em
+	font-size: 18px;
+	margin-bottom: 0;
+	padding: 0;
 }
 
-/*miejsca na wpisanie loginu i hasła*/
-input[type=login],
+/*pola do wrowadzania danych potrzebnych do rejestracji*/
+input[type=text],
+input[type=email],
 input[type=password]
 {
-	width: 230px;
+	width: 250px;
 	height: 40px;
 	margin-top: 15px;
 	outline: none;
 	padding: 5px;
-	border-radius: 3px;
+	border-radius: 5px;
 	border: 2px solid white;
 	font-size: 20px;
 	transition: all .2s ease-in-out;
 }
 
-input[type=login]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
 input[type=password]:focus
 {
 	-webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.87); 
@@ -347,72 +349,51 @@ input::-webkit-input-placeholder
 	color: #2a2a2a;
 }
 
-input:focus::-webkit-input-placeholder
+/*zgoda na regulamin*/
+input[type=checkbox]
 {
-	color: #428c42;
+	margin-top: 20px;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	left: -10.8em;
+	cursor: pointer;
 }
 
-/*przycisk odpowiadający za logowanie*/
-.zal2
+.checkboxText
 {
+	width: 300px;
 	position: relative;
-	top: -0.4em;
-	left: 0;
-	width: 262px;
+	top: -1.21em;
+	left: 1.25em;
+}
+
+.checkboxText a 
+{
+	text-decoration: underline;
+}
+
+/*przycisk do rejestracji*/
+.rej
+{
+	width: 280px;
 	font-size: 20px;
 	border-radius: 5px;
 	border: 1px solid #00b300;
+	margin-top: 10px;
 	padding: 10px;
 	color: white;
-	margin-top: 40px;
 	background-color: #00b300;
 	letter-spacing: 4px;
 	transition: all .2s ease-in-out;
-	
 }
 
-.zal2:hover
+.rej:hover
 {
 	background-color: #00c800;	
 	color: #292929;
 	border: 1px solid #00c800;
 	cursor: pointer;
-}
-
-
-/*napis "Nie pamietasz hasła?"*/
-h2
-{
-	font-size: 16px;
-	letter-spacing: 3px;
-}
-
-h2 > a
-{
-	color: #00b300;
-	text-decoration: none;
-	line-height: 4px;
-}
-
-h2 > a:hover
-{
-	text-decoration: underline;
-}
-
-/*napis "Zarejestruj się" pod boxem*/
-h3
-{
-	position: relative;
-	top: -4em;
-	text-align: center;
-	letter-spacing: 3px;
-	font-size: 18px;
-	color: white !important;
-}
-
-h3:hover
-{
-	text-decoration: underline;
 }
 
 /*odnośniki do social mediów*/
