@@ -1,0 +1,591 @@
+body
+{
+	background-image: url("img/tlo.png");
+	font-size: 24px;
+	color:white;
+    font-family: 'BenchNine', sans-serif;
+	margin: 0 !important;
+	padding: 0;
+}
+
+*
+{
+	box-sizing: border-box;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.container
+{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: auto;
+}
+
+/*logo i napis*/
+.header
+{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: 6.4em;
+
+}
+
+.img
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 1.4em;
+	left: 39.5%;
+}
+
+
+.text
+{
+	display: flex;
+	position: absolute;
+	top: 0.1em;
+	left: 46%;
+	margin: 40px 0px 0px 10px;
+	font-size: 45px;
+}
+
+
+
+/*przycisk zaloguj*/
+.header input[type=button]
+{
+	position: absolute;
+	top: 0.89em;
+	left: 80vw;
+	margin: 80px 15px 15px 0px;
+	border-radius: 6px;
+	border: 1px solid #289b38;
+	font-family: 'BenchNine', sans-serif;
+	font-size: 22px;
+	width: 150px;
+	color: white;
+	height: 40px;
+	background-color: #00b300;
+	transition: all .2s ease-in-out;
+}
+
+.header input[type=button]:hover
+{
+	background-color: #00c800;
+	border: 1px solid #00c800;
+	cursor: pointer;
+	color: #292929;
+}
+
+/*przycisk rejestracji*/
+input[type=submit]
+{
+	position: absolute;
+	top: 0.89em;
+	left: 89vw;
+	margin: 80px 15px 15px 0px;
+	border-radius: 6px;
+	background-color: #c1c1c1; 
+	border: 1px solid #c1c1c1;
+	font-family: 'BenchNine', sans-serif;
+	font-size: 22px;
+	width: 150px;
+	color: white;
+	height: 40px;
+	transition: all .2s ease-in-out;
+}
+
+input[type=submit]:hover
+{
+	background-color: #e0e0e0;
+	border: 1px solid #e0e0e0;
+	color: #292929;
+	cursor: pointer;
+}
+
+/*menu nawigacyjne strony*/
+.nav
+{
+	clear: both;
+	text-align:center;
+	border-top: 1px solid #292929;
+	border-bottom: 1px solid #292929;
+	height: 52px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #c1c1c1;
+}
+
+ol
+{
+	
+	padding: 0;
+	display: inline-block;
+	margin: 0;
+	line-height: 170%;
+	list-style-type: none;
+}
+
+ol a
+{
+	color: #4c4f52;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+
+ol a:hover
+{
+	color: #e60012;
+}
+
+ol > li
+{
+	position: relative;
+	float: left;
+	border-right: 1px solid #292929;
+	width: 160px;
+	height: 40px;
+	transition: all .2s ease-in-out;
+	z-index: 1;
+}
+
+ol > li:hover
+{
+	background-color: #f1f1f1;
+}
+
+ol > li:first-child:hover
+{
+	border-bottom: 2px solid #e60012;	
+}
+
+ol > li:last-child:hover
+{
+	border-bottom: 2px solid #e60012;	
+}
+
+ol > li:first-child
+{
+	border-left: 1px solid #292929;
+}
+
+ol > li > ul
+{
+	background-color: #f1f1f1;
+	padding: 0;
+	margin: 0;
+	display: none;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+}
+
+ol > li:hover > ul 
+{
+	display: block;
+	border-bottom: 2px solid #e60012;
+}
+
+ol > li > ul > li
+{
+	list-style-type: none;
+	border-top: 1px solid #292929;
+	transition: all .2s ease-in-out;
+}
+
+
+
+ol > li > ul > li:hover
+{
+	background-color: #c1c1c1;
+}
+
+/*przycisk pojawiający się w wersji na telefon(od 800px)*/
+.menuButton
+{
+	display: none;
+	position: absolute;
+	top: 6.8em;
+	right: 2%;
+	transition: all .2s ease-in-out;
+}
+
+.menuButton:hover
+{
+	color: #c4302b;
+}
+
+/*menu nawigacyjne dla rozdzielczości mniejszej niż 800px*/
+.hamburger
+{
+	display: none;
+
+}
+
+.hamburger.active
+{
+	display: flex;
+	flex-flow: column nowrap;
+	position: absolute;
+	top: 8.5em;
+	left: 0%;
+	width: 100%;
+}
+
+.bar
+{
+	padding: 10px;
+	width: 100%;
+	cursor: pointer;
+	background-color: #f1f1f1;
+	border-top: 1px solid #292929;
+	color: #4c4f52;
+	z-index: 1;
+}
+
+.bar:hover
+{
+	color: #e60012;
+	background-color: #c1c1c1;
+}
+
+/*klasa odpowiadająca za obniżenie strony po otwarciu menu poniżej 800px*/
+.toDown
+{
+	position: absolute;
+	top: 8.4em;
+	width: 100%;
+	height: auto;
+}
+
+.toDown.aLittleBigMoreToDown
+{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 18em;
+}
+
+/**/
+.boxContainer
+{
+	width: 100%;
+	height: 25em;
+}
+
+/*okienko "Nie pamiętas?z hasła"*/
+.box
+{
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
+	position: relative;
+	top: 3.4em;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 40px;
+	background-color: #c1c1c1;
+	-webkit-box-shadow: 0px 0px 9px 4px rgba(193,193,193,0.59); 
+	box-shadow: 0px 0px 9px 4px rgba(193,193,193,0.59);
+}
+
+/*napis "Nie pamiętas?z hasła?"*/
+h1
+{
+	position: relative;
+	top: -0.6em;
+	font-size: 45px;
+	letter-spacing: 4px;
+}
+
+/*napis "Prosimy podać swój adres e-mail poniżej. Otrzymasz link do zresetowania hasła."*/
+p
+{
+	position: relative;
+	top: -2.2em;
+	font-size: 17px;
+	margin-bottom: 0;
+	padding: 0;
+	text-align: center;
+}
+
+form
+{
+	position: relative;
+	top: -1.2em;
+}
+
+/*miejsce na wprowadzenie maila*/
+input[type=email]
+{
+	width: 300px;
+	height: 40px;
+	margin-top: 15px;
+	outline: none;
+	padding: 5px;
+	border-radius: 5px;
+	border: 2px solid white;
+	font-size: 20px;
+	transition: all .2s ease-in-out;
+}
+
+input[type=email]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.87); 
+	box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.87);
+	border: 2px solid #a5cda5;
+	background-color: #e9f3e9;
+	color: #428c42;
+}
+
+input::-webkit-input-placeholder
+{
+	color: #2a2a2a;
+}
+
+input:focus::-webkit-input-placeholder
+{
+	color: #428c42;
+}
+
+/*przycisk do przesłania prośby o przypomnienie hasła*/
+.zal2
+{
+	width: 314px;
+	font-size: 20px;
+	border-radius: 5px;
+	border: 1px solid #00b300;
+	padding: 10px;
+	color: white;
+	margin-top: 20px;
+	background-color: #00b300;
+	letter-spacing: 4px;
+	transition: all .2s ease-in-out;
+}
+
+.zal2:hover
+{
+	background-color: #00c800;	
+	color: #292929;
+	border: 1px solid #00c800;
+	cursor: pointer;
+}
+
+
+/*pozycjowoawnie footera*/
+footer
+{
+	position: absolute;
+}
+
+footer.down
+{
+	position: absolute;
+	top: 3em;
+}
+
+/*odnośniki do social mediów*/
+.social
+{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	height: 120px;
+	background-color: #343637;
+}
+
+.socialdivs
+{
+	display: flex;
+	width: 1000px;
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.yt
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 120px;
+}
+
+.yt:hover
+{
+	background-color: #c4302b;
+}
+
+
+.fb
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 245px;
+	height: 120px;
+}
+
+.fb:hover
+{
+	background-color: #3b5998;
+}
+
+.gplus
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 120px;
+}
+
+.gplus:hover
+{
+	background-color: #db4a39;
+}
+
+.ig
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 120px;
+}
+
+.ig:hover
+{
+	background-color: #3f729b;
+}
+
+/*stopka z informacjami o autorze*/
+.footer
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #252626;
+	padding: 20px;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 1700px)
+{
+	.header input[type=button] { left: 78vw; }
+	.img { left: 38%; }
+	.content { left: -2%; }
+}
+
+@media screen and (max-width: 1540px)
+{
+	.header input[type=button] { left: 75.5vw; }
+	input[type=submit] { left: 87vw; }
+	.img { left: 37%; }
+	.ad2 { left: 90%; }
+	.content { left: -2.2%; }
+}
+
+@media screen and (max-width: 1300px)
+{
+	.header input[type=button] { left: 72vw; }
+	input[type=submit] { left: 85.5vw; }
+	.ad1 { display: none; }
+	.ad2 { display: none; }
+	.content { left: -2.6%; }
+	.hamburger{display: none;}
+}
+
+@media screen and (max-width: 1150px)
+{
+	.header input[type=button] { left: 69vw; }
+	input[type=submit] { left: 84vw; }
+	.img { left: 32%; }
+	.text { left: 43%; }
+}
+
+@media screen and (max-width: 1000px)
+{
+	.header input[type=button] { left: 66vw; }
+	input[type=submit] { left: 82.5vw; }
+	.img { left: 28%; }
+	.text { left: 43%; }
+	ol > li { width: 16vw; }
+	.yt { width: 25vw; }
+	.fb { width: 25vw; }
+	.gplus { width: 25vw; }
+	.ig { width: 25vw; }
+}
+
+@media screen and (max-width: 900px)
+{
+	.header input[type=button] { left: 60vw; }
+	input[type=submit] { left: 79vw; }
+	.img { left: 28%; }
+	.text { left: 43%; }
+
+}
+
+
+@media screen and (max-width: 800px)
+{
+	.img { left: 26%; }
+	.text { left: 44%; }
+	.header input[type=button] { left: 2%; top: 3.65em }
+	input[type=submit] { left: 25%; top: 3.65em; }
+	.content { left: -5.5%; }
+	.yt { width: 25vw; }
+	.fb { width: 25vw; }
+	.gplus { width: 25vw; }
+	.ig { width: 25vw; }
+	.nav
+	{
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	ol{ display: none; }
+	.menuButton
+	{
+		display: flex;
+		cursor: pointer;
+	}
+	footer{ position: absolute; bottom: 0; }
+}
+
+@media screen and (max-width: 600px)
+{
+	.img { left: 10%; }
+	.text { left: 35%; }
+	.header input[type=button] { left: 2%; top: 3.65em; }
+	input[type=submit] { left: 35%; top: 3.65em; }
+	.content { left: -6.5%; }
+	.yt { width: 25vw; }
+	.fb { width: 25vw; }
+	.gplus { width: 25vw; }
+	.ig { width: 25vw; }
+	.nav
+	{
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	ol { display: none; }
+
+	.menuButton
+	{
+		display: flex;
+		cursor: pointer;
+	}
+}
