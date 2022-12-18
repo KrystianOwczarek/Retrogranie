@@ -10,7 +10,8 @@ body
 
 *
 {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 a
@@ -21,8 +22,13 @@ a
 
 .container
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
 	width: 100%;
 	height: auto;
 }
@@ -30,8 +36,13 @@ a
 /*logo i napis*/
 .header
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row nowrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
 	width: 100%;
 	height: 6.4em;
 
@@ -39,9 +50,15 @@ a
 
 .img
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: absolute;
 	top: 1.4em;
 	left: 39.5%;
@@ -50,6 +67,8 @@ a
 
 .text
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	position: absolute;
 	top: 0.1em;
@@ -75,6 +94,8 @@ input[type=button]
 	color: white;
 	height: 40px;
 	background-color: #00b300;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -101,6 +122,8 @@ input[type=submit]
 	width: 150px;
 	color: white;
 	height: 40px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -139,6 +162,8 @@ ol a
 {
 	color: #4c4f52;
 	text-decoration: none;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -154,6 +179,8 @@ ol > li
 	border-right: 1px solid #292929;
 	width: 160px;
 	height: 40px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 	z-index: 1;
 }
@@ -185,6 +212,8 @@ ol > li > ul
 	margin: 0;
 	display: none;
 	border-radius: 5px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -198,6 +227,8 @@ ol > li > ul > li
 {
 	list-style-type: none;
 	border-top: 1px solid #292929;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -215,6 +246,8 @@ ol > li > ul > li:hover
 	position: absolute;
 	top: 6.8em;
 	right: 2%;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -232,8 +265,13 @@ ol > li > ul > li:hover
 
 .hamburger.active
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
 	position: absolute;
 	top: 8.5em;
 	left: 0%;
@@ -277,10 +315,19 @@ ol > li > ul > li:hover
 /*pojemnik na elementy ze środka strony*/
 .contentContainer
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	z-index: -1;
 }
 
@@ -326,8 +373,13 @@ footer.down
 /*odnośniki do social mediów*/
 .social
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row nowrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
 	width: 100%;
 	height: 120px;
 	background-color: #343637;
@@ -335,6 +387,8 @@ footer.down
 
 .socialdivs
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 1000px;
 	height: 120px;
@@ -344,9 +398,15 @@ footer.down
 
 .yt
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 250px;
 	height: 120px;
 }
@@ -359,9 +419,15 @@ footer.down
 
 .fb
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 245px;
 	height: 120px;
 }
@@ -373,9 +439,15 @@ footer.down
 
 .gplus
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 250px;
 	height: 120px;
 }
@@ -387,9 +459,15 @@ footer.down
 
 .ig
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 250px;
 	height: 120px;
 }
@@ -402,9 +480,15 @@ footer.down
 /*stopka z informacjami o autorze*/
 .footer
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background-color: #252626;
 	padding: 20px;
 	text-align: center;
@@ -481,13 +565,20 @@ footer.down
 	.ig { width: 25vw; }
 	.nav
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-flow: column nowrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column nowrap;
+		        flex-flow: column nowrap;
 	}
 
 	ol{ display: none; }
 	.menuButton
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		cursor: pointer;
 	}
@@ -507,14 +598,21 @@ footer.down
 	.ig { width: 25vw; }
 	.nav
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-flow: column nowrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column nowrap;
+		        flex-flow: column nowrap;
 	}
 
 	ol { display: none; }
 
 	.menuButton
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		cursor: pointer;
 	}

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body
 {
 	background-image: url("img/tlo.png");
@@ -10,7 +17,8 @@ body
 
 *
 {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 a
@@ -21,8 +29,13 @@ a
 
 .container
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
 	width: 100%;
 	height: auto;
 }
@@ -30,8 +43,13 @@ a
 /*logo i napis*/
 .header
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row nowrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
 	width: 100%;
 	height: 6.4em;
 
@@ -39,9 +57,15 @@ a
 
 .img
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: absolute;
 	top: 1.4em;	
 	left: 39.5%;
@@ -50,6 +74,8 @@ a
 
 .text
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	position: absolute;
 	top: 0.1em;
@@ -75,6 +101,8 @@ input[type=button].log
 	color: white;
 	height: 40px;
 	background-color: #00b300;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -101,6 +129,8 @@ input[type=submit]
 	width: 150px;
 	color: white;
 	height: 40px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -141,6 +171,8 @@ ol a
 {
 	color: #4c4f52;
 	text-decoration: none;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -156,6 +188,8 @@ ol > li
 	border-right: 1px solid #292929;
 	width: 160px;
 	height: 40px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 	z-index: 1;
 }
@@ -187,6 +221,8 @@ ol > li > ul
 	margin: 0;
 	display: none;
 	border-radius: 5px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -200,6 +236,8 @@ ol > li > ul > li
 {
 	list-style-type: none;
 	border-top: 1px solid #292929;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -217,6 +255,8 @@ ol > li > ul > li:hover
 	position: absolute;
 	top: 6.85em;
 	right: 2%;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -233,8 +273,13 @@ ol > li > ul > li:hover
 
 .hamburger.active
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
 	position: absolute;
 	top: 8.5em;
 	left: 0%;
@@ -285,10 +330,19 @@ ol > li > ul > li:hover
 /*okno rejestracji*/
 .box
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: relative;
 	top: 3.4em;
 	width: 400px;
@@ -330,6 +384,8 @@ input[type=password]
 	border-radius: 5px;
 	border: 2px solid white;
 	font-size: 20px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -385,6 +441,8 @@ input[type=checkbox]
 	color: white;
 	background-color: #00b300;
 	letter-spacing: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -399,8 +457,13 @@ input[type=checkbox]
 /*odnośniki do social mediów*/
 .social
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row nowrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
 	width: 100%;
 	height: 120px;
 	background-color: #343637;
@@ -408,6 +471,8 @@ input[type=checkbox]
 
 .socialdivs
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 1000px;
 	height: 120px;
@@ -417,9 +482,15 @@ input[type=checkbox]
 
 .yt
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 250px;
 	height: 120px;
 }
@@ -432,9 +503,15 @@ input[type=checkbox]
 
 .fb
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 245px;
 	height: 120px;
 }
@@ -446,9 +523,15 @@ input[type=checkbox]
 
 .gplus
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 250px;
 	height: 120px;
 }
@@ -460,9 +543,15 @@ input[type=checkbox]
 
 .ig
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 250px;
 	height: 120px;
 }
@@ -475,9 +564,15 @@ input[type=checkbox]
 /*stopka z informacjami o autorze*/
 .footer
 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background-color: #252626;
 	padding: 20px;
 	text-align: center;
@@ -554,13 +649,20 @@ input[type=checkbox]
 	.ig { width: 25vw; }
 	.nav
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-flow: column nowrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column nowrap;
+		        flex-flow: column nowrap;
 	}
 
 	ol{ display: none; }
 	.menuButton
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		cursor: pointer;
 	}
@@ -579,14 +681,21 @@ input[type=checkbox]
 	.ig { width: 25vw; }
 	.nav
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-flow: column nowrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column nowrap;
+		        flex-flow: column nowrap;
 	}
 
 	ol { display: none; }
 
 	.menuButton
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		cursor: pointer;
 	}
